@@ -1,13 +1,3 @@
----
-title: "R4DS Learning Notes Part 1"
-output:
-  pdf_document: default
-  html_notebook: default
-  html_document: default
-  word_document: default
----
-<font size=4>
-
 ## Introduction
 
 Data exploration is the art of looking at your data, rapidly generating hypotheses, quickly testing them, then repeating again and again and again.  
@@ -16,7 +6,7 @@ Data exploration is the art of looking at your data, rapidly generating hypothes
 
 ## Data Visualization
 
-> ??The simple graph has brought more information to the data analyst??s mind than any other device.?? ?? John Tukey
+> The simple graph has brought more information to the data analyst??s mind than any other device.--- John Tukey
 
 ### Create ggplot
 
