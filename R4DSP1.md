@@ -61,7 +61,7 @@ mpg
 ggplot(data=mpg)+geom_point(mapping=aes(x=displ,y=hwy))
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![](https://github.com/TerrenceGao/R-for-Data-Science-learning-notes/blob/master/image/unnamed-chunk-2-1.png?raw=true)
 
 When use `aes()`, fiil or color inside `aes()` will be grouped
 
@@ -72,7 +72,7 @@ p  + geom_boxplot(aes(x=cut, fill=cut)) +
   scale_fill_manual(values=rep("cyan", length(levels(diamonds$cut))))
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![](https://github.com/TerrenceGao/R-for-Data-Science-learning-notes/blob/master/image/unnamed-chunk-3-1.png?raw=true)
 
 ```r
 p  + geom_boxplot(aes(x=cut), fill="cyan")
