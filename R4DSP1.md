@@ -6,7 +6,7 @@ Data exploration is the art of looking at your data, rapidly generating hypothes
 
 ## Data Visualization
 
-> The simple graph has brought more information to the data analyst??s mind than any other device.--- John Tukey
+> The simple graph has brought more information to the data analyst's mind than any other device.--- John Tukey
 
 ### Create ggplot
 
@@ -144,7 +144,7 @@ ggplot(data = mpg) +
 
 ![plot of chunk unnamed-chunk-6](./image/unnamed-chunk-6-3.png)
 
-We can also set the aesthetic properties of our geom manually. We set the aesthetic by name as an argument of your geom function; i.e. it goes outside of `aes()`. We??ll need to pick a value that makes sense for that aesthetic:
+We can also set the aesthetic properties of our geom manually. We set the aesthetic by name as an argument of your geom function; i.e. it goes outside of `aes()`. We'll need to pick a value that makes sense for that aesthetic:
 
 * The name of a color as a character string.
 * The size of a point in mm.
@@ -365,7 +365,7 @@ ggplot(data = diamonds) +
 
 ![plot of chunk unnamed-chunk-16](./image/unnamed-chunk-16-1.png)
 
-3. We might want to draw greater attention to the statistical transformation in our code. For example, we might use `stat_summary()`, which summarises the y values for each unique x value, to draw attention to the summary that we??re computing:
+3. We might want to draw greater attention to the statistical transformation in our code. For example, we might use `stat_summary()`, which summarises the y values for each unique x value, to draw attention to the summary that we're computing:
 
 
 ```r
@@ -393,7 +393,7 @@ ggplot(data = diamonds) +
 
 ![plot of chunk unnamed-chunk-18](./image/unnamed-chunk-18-1.png)
 
-The stacking is performed automatically by the **position adjustment** specified by the position argument. If we don??t want a stacked bar chart, we can use one of three other options: `"identity"`, `"dodge"` or `"fill"`.
+The stacking is performed automatically by the **position adjustment** specified by the position argument. If we don't want a stacked bar chart, we can use one of three other options: `"identity"`, `"dodge"` or `"fill"`.
  
 * `position = "identity"` will place each object exactly where it falls in the context of the graph. This is not very useful for bars, because it overlaps them. The identity position adjustment is more useful for 2d geoms, like points, where it is the default.
 
@@ -417,8 +417,8 @@ ggplot(data = diamonds) +
 
 * `position = "dodge"` places overlapping objects directly beside one another. This makes it easier to compare individual values.
 
-There??s one other type of adjustment that??s not useful for bar charts, but it can be very useful for scatterplots. This problem is known as **overplotting**. This arrangement makes it hard to see where the mass of the data is.  
-We can avoid this gridding by setting the position adjustment to ??jitter??. `position = "jitter"` adds a small amount of random noise to each point. This spreads the points out because no two points are likely to receive the same amount of random noise. Because this is such a useful operation, ggplot2 comes with a shorthand for `geom_point(position = "jitter")`: `geom_jitter()`.
+There's one other type of adjustment that's not useful for bar charts, but it can be very useful for scatterplots. This problem is known as **overplotting**. This arrangement makes it hard to see where the mass of the data is.  
+We can avoid this gridding by setting the position adjustment to 'jitter'. `position = "jitter"` adds a small amount of random noise to each point. This spreads the points out because no two points are likely to receive the same amount of random noise. Because this is such a useful operation, ggplot2 comes with a shorthand for `geom_point(position = "jitter")`: `geom_jitter()`.
 
 
 ```r
@@ -432,7 +432,7 @@ ggplot(data = mpg) +
 
 Coordinate systems are probably the most complicated part of ggplot2. The default coordinate system is the Cartesian coordinate system where the x and y positions act independently to determine the location of each point. There are a number of other coordinate systems that are occasionally helpful.
 
-* `coord_flip()` switches the x and y axes. This is useful (for example), if we want horizontal boxplots. It??s also useful for long labels: it??s hard to get them to fit without overlapping on the x-axis.
+* `coord_flip()` switches the x and y axes. This is useful (for example), if we want horizontal boxplots. It's also useful for long labels: it's hard to get them to fit without overlapping on the x-axis.
 
 
 ```r
@@ -450,7 +450,7 @@ ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
 
 ![plot of chunk unnamed-chunk-22](./image/unnamed-chunk-22-2.png)
 
-* `coord_quickmap()` sets the aspect ratio correctly for maps. This is very important if you??re plotting spatial data with ggplot2.
+* `coord_quickmap()` sets the aspect ratio correctly for maps. This is very important if you're plotting spatial data with ggplot2.
 
 
 ```r
@@ -527,7 +527,7 @@ ggplot(data = diamonds) +
 ![plot of chunk unnamed-chunk-25](./image/unnamed-chunk-25-1.png)
 
 ### The Layered Grammar of Graphics
-Now we learned much more than how to make scatterplots, bar charts, and boxplots. We learned a foundation that we can use to make any type of plot with ggplot2. To see this, let??s add position adjustments, stats, coordinate systems, and faceting to our code template:
+Now we learned much more than how to make scatterplots, bar charts, and boxplots. We learned a foundation that we can use to make any type of plot with ggplot2. To see this, let's add position adjustments, stats, coordinate systems, and faceting to our code template:
 
 
 ```r
