@@ -61,7 +61,7 @@ mpg
 ggplot(data=mpg)+geom_point(mapping=aes(x=displ,y=hwy))
 ```
 
-![](https://github.com/TerrenceGao/R-for-Data-Science-learning-notes/blob/master/image/unnamed-chunk-2-1.png?raw=true)
+![](https://github.com/TerrenceGao/R-for-Data-Science-learning-notes/blob/master/image1/unnamed-chunk-2-1.png?raw=true)
 
 When use `aes()`, fiil or color inside `aes()` will be grouped
 
@@ -72,13 +72,13 @@ p  + geom_boxplot(aes(x=cut, fill=cut)) +
   scale_fill_manual(values=rep("cyan", length(levels(diamonds$cut))))
 ```
 
-![](https://github.com/TerrenceGao/R-for-Data-Science-learning-notes/blob/master/image/unnamed-chunk-3-1.png?raw=true)
+![](https://github.com/TerrenceGao/R-for-Data-Science-learning-notes/blob/master/image1/unnamed-chunk-3-1.png?raw=true)
 
 ```r
 p  + geom_boxplot(aes(x=cut), fill="cyan")
 ```
 
-![plot of chunk unnamed-chunk-3](./image/unnamed-chunk-3-2.png)
+![plot of chunk unnamed-chunk-3](./image1/unnamed-chunk-3-2.png)
 
 ### A Graphing Template  
 
@@ -99,7 +99,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, colour = class))
 ```
 
-![plot of chunk unnamed-chunk-5](./image/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](./image1/unnamed-chunk-5-1.png)
 
 To map an aesthetic to a variable, associate the name of the aesthetic to the name of the variable inside `aes()`. ggplot2 will automatically assign a unique level of the aesthetic (here a unique color) to each unique value of the variable, a process known as **scaling**. ggplot2 will also add a legend that explains which levels correspond to which values.
 
@@ -116,7 +116,7 @@ ggplot(data = mpg) +
 ## Warning: Using size for a discrete variable is not advised.
 ```
 
-![plot of chunk unnamed-chunk-6](./image/unnamed-chunk-6-1.png)
+![plot of chunk unnamed-chunk-6](./image1/unnamed-chunk-6-1.png)
 
 ```r
 #second alpha
@@ -124,7 +124,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
 ```
 
-![plot of chunk unnamed-chunk-6](./image/unnamed-chunk-6-2.png)
+![plot of chunk unnamed-chunk-6](./image1/unnamed-chunk-6-2.png)
 
 ```r
 #third shape
@@ -142,7 +142,7 @@ ggplot(data = mpg) +
 ## Warning: Removed 62 rows containing missing values (geom_point).
 ```
 
-![plot of chunk unnamed-chunk-6](./image/unnamed-chunk-6-3.png)
+![plot of chunk unnamed-chunk-6](./image1/unnamed-chunk-6-3.png)
 
 We can also set the aesthetic properties of our geom manually. We set the aesthetic by name as an argument of your geom function; i.e. it goes outside of `aes()`. We'll need to pick a value that makes sense for that aesthetic:
 
@@ -163,7 +163,7 @@ ggplot(data = mpg) +
 geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-![plot of chunk unnamed-chunk-7](./image/unnamed-chunk-7-1.png)
+![plot of chunk unnamed-chunk-7](./image1/unnamed-chunk-7-1.png)
 
 ### Facet 
 
@@ -178,7 +178,7 @@ ggplot(data = mpg) +
   facet_wrap(~ class, nrow = 2)
 ```
 
-![plot of chunk unnamed-chunk-8](./image/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-8](./image1/unnamed-chunk-8-1.png)
 
 To facet our plot on the combination of two variables, add `facet_grid()` to our plot call. The first argument of `facet_grid()` is also a formula. This time the formula should contain two variable names separated by a `~`.
 
@@ -189,7 +189,7 @@ ggplot(data = mpg) +
   facet_grid(drv ~ cyl)
 ```
 
-![plot of chunk unnamed-chunk-9](./image/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-9](./image1/unnamed-chunk-9-1.png)
 
 If we want to not facet in the rows or columns dimension, use a `.` instead of a variable name, e.g. `+ facet_grid(. ~ cyl)`.
 
@@ -200,7 +200,7 @@ ggplot(data = mpg) +
   facet_grid(cyl~.)
 ```
 
-![plot of chunk unnamed-chunk-10](./image/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-10](./image1/unnamed-chunk-10-1.png)
 
 ### Geometric Objects
 A **geom** is the geometrical object that a plot uses to represent data. To change the geom in our plot, change the geom function that we add to `ggplot()`.
@@ -212,7 +212,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-![plot of chunk unnamed-chunk-11](./image/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-11](./image1/unnamed-chunk-11-1.png)
 
 ```r
 # right
@@ -224,7 +224,7 @@ ggplot(data = mpg) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-11](./image/unnamed-chunk-11-2.png)
+![plot of chunk unnamed-chunk-11](./image1/unnamed-chunk-11-2.png)
 
 ggplot2 provides over 30 geoms, and extension packages provide even more (see https://www.ggplot2-exts.org for a sampling). The best way to get a comprehensive overview is the ggplot2 cheatsheet, which we can find at http://rstudio.com/cheatsheets. 
 
@@ -240,7 +240,7 @@ ggplot(data = mpg) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-12](./image/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-12](./image1/unnamed-chunk-12-1.png)
 
 ```r
 ggplot(data = mpg) +
@@ -251,7 +251,7 @@ ggplot(data = mpg) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-12](./image/unnamed-chunk-12-2.png)
+![plot of chunk unnamed-chunk-12](./image1/unnamed-chunk-12-2.png)
 
 ```r
 ggplot(data = mpg) +
@@ -265,7 +265,7 @@ ggplot(data = mpg) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-12](./image/unnamed-chunk-12-3.png)
+![plot of chunk unnamed-chunk-12](./image1/unnamed-chunk-12-3.png)
 
 To display multiple geoms in the same plot, add multiple geom functions to `ggplot()`:
 
@@ -280,7 +280,7 @@ ggplot(data = mpg) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-13](./image/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-13](./image1/unnamed-chunk-13-1.png)
 
 ```r
 # more convinient way to change x,y axis
@@ -293,7 +293,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-13](./image/unnamed-chunk-13-2.png)
+![plot of chunk unnamed-chunk-13](./image1/unnamed-chunk-13-2.png)
 
 If we place mappings in a geom function, ggplot2 will treat them as local mappings for the layer. It will use these mappings to extend or overwrite the global mappings for that layer only. This makes it possible to display different aesthetics in different layers.
 
@@ -308,7 +308,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-14](./image/unnamed-chunk-14-1.png)
+![plot of chunk unnamed-chunk-14](./image1/unnamed-chunk-14-1.png)
 
 ```r
 #specify different data for each layer
@@ -321,7 +321,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ## `geom_smooth()` using method = 'loess'
 ```
 
-![plot of chunk unnamed-chunk-14](./image/unnamed-chunk-14-2.png)
+![plot of chunk unnamed-chunk-14](./image1/unnamed-chunk-14-2.png)
 
 ### Statistical Transformations
 Many graphs, like scatterplots, plot the raw values of our dataset. Other graphs, like **bar charts**, calculate new values to plot:
@@ -353,7 +353,7 @@ ggplot(data = demo) +
   geom_bar(mapping = aes(x = cut, y = freq), stat ="identity")
 ```
 
-![plot of chunk unnamed-chunk-15](./image/unnamed-chunk-15-1.png)
+![plot of chunk unnamed-chunk-15](./image1/unnamed-chunk-15-1.png)
 
 2. We might want to override the default mapping from transformed variables to aesthetics. For example, we might want to display a bar chart of proportion, rather than count:
 
@@ -363,7 +363,7 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = cut, y = ..prop.., group = 1))
 ```
 
-![plot of chunk unnamed-chunk-16](./image/unnamed-chunk-16-1.png)
+![plot of chunk unnamed-chunk-16](./image1/unnamed-chunk-16-1.png)
 
 3. We might want to draw greater attention to the statistical transformation in our code. For example, we might use `stat_summary()`, which summarises the y values for each unique x value, to draw attention to the summary that we're computing:
 
@@ -378,7 +378,7 @@ ggplot(data = diamonds) +
   )
 ```
 
-![plot of chunk unnamed-chunk-17](./image/unnamed-chunk-17-1.png)
+![plot of chunk unnamed-chunk-17](./image1/unnamed-chunk-17-1.png)
 
 ggplot2 provides over 20 stats for us to use. Each stat is a function, so we can get help in the usual way, e.g. `?stat_bin`. To see a complete list of stats, try the ggplot2 [cheatsheet](http://rstudio.com/cheatsheets).
 
@@ -391,7 +391,7 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = cut, fill = clarity))
 ```
 
-![plot of chunk unnamed-chunk-18](./image/unnamed-chunk-18-1.png)
+![plot of chunk unnamed-chunk-18](./image1/unnamed-chunk-18-1.png)
 
 The stacking is performed automatically by the **position adjustment** specified by the position argument. If we don't want a stacked bar chart, we can use one of three other options: `"identity"`, `"dodge"` or `"fill"`.
  
@@ -403,7 +403,7 @@ ggplot(data = diamonds, mapping = aes(x = cut, fill = clarity)) +
   geom_bar(alpha = 1/5, position = "identity")
 ```
 
-![plot of chunk unnamed-chunk-19](./image/unnamed-chunk-19-1.png)
+![plot of chunk unnamed-chunk-19](./image1/unnamed-chunk-19-1.png)
 
 * `position = "fill"` works like stacking, but makes each set of stacked bars the same height. This makes it easier to compare proportions across groups.
 
@@ -413,7 +413,7 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = cut, fill = clarity), position = "fill")
 ```
 
-![plot of chunk unnamed-chunk-20](./image/unnamed-chunk-20-1.png)
+![plot of chunk unnamed-chunk-20](./image1/unnamed-chunk-20-1.png)
 
 * `position = "dodge"` places overlapping objects directly beside one another. This makes it easier to compare individual values.
 
@@ -426,7 +426,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy), position = "jitter")
 ```
 
-![plot of chunk unnamed-chunk-21](./image/unnamed-chunk-21-1.png)
+![plot of chunk unnamed-chunk-21](./image1/unnamed-chunk-21-1.png)
 
 ### Corordinate Systems
 
@@ -440,7 +440,7 @@ ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
   geom_boxplot()
 ```
 
-![plot of chunk unnamed-chunk-22](./image/unnamed-chunk-22-1.png)
+![plot of chunk unnamed-chunk-22](./image1/unnamed-chunk-22-1.png)
 
 ```r
 ggplot(data = mpg, mapping = aes(x = class, y = hwy)) + 
@@ -448,7 +448,7 @@ ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
   coord_flip()
 ```
 
-![plot of chunk unnamed-chunk-22](./image/unnamed-chunk-22-2.png)
+![plot of chunk unnamed-chunk-22](./image1/unnamed-chunk-22-2.png)
 
 * `coord_quickmap()` sets the aspect ratio correctly for maps. This is very important if you're plotting spatial data with ggplot2.
 
@@ -479,7 +479,7 @@ ggplot(nz, aes(long, lat, group = group)) +
   geom_polygon(fill = "white", colour = "black")
 ```
 
-![plot of chunk unnamed-chunk-23](./image/unnamed-chunk-23-1.png)
+![plot of chunk unnamed-chunk-23](./image1/unnamed-chunk-23-1.png)
 
 ```r
 ggplot(nz, aes(long, lat, group = group)) +
@@ -487,7 +487,7 @@ ggplot(nz, aes(long, lat, group = group)) +
   coord_quickmap()
 ```
 
-![plot of chunk unnamed-chunk-23](./image/unnamed-chunk-23-2.png)
+![plot of chunk unnamed-chunk-23](./image1/unnamed-chunk-23-2.png)
 
 * `coord_polar()` uses polar coordinates. Polar coordinates reveal an interesting connection between a bar chart and a Coxcomb chart.
 
@@ -504,13 +504,13 @@ bar <- ggplot(data = diamonds) +
 bar + coord_flip()
 ```
 
-![plot of chunk unnamed-chunk-24](./image/unnamed-chunk-24-1.png)
+![plot of chunk unnamed-chunk-24](./image1/unnamed-chunk-24-1.png)
 
 ```r
 bar + coord_polar()
 ```
 
-![plot of chunk unnamed-chunk-24](./image/unnamed-chunk-24-2.png)
+![plot of chunk unnamed-chunk-24](./image1/unnamed-chunk-24-2.png)
 
 Here shows how to draw a pie chart with `coord_polar()`, more ways to use `coord_polar()` could be found in this [link](http://ggplot2.tidyverse.org/reference/coord_polar.html)
 
@@ -524,7 +524,7 @@ ggplot(data = diamonds) +
   coord_polar(theta="y")
 ```
 
-![plot of chunk unnamed-chunk-25](./image/unnamed-chunk-25-1.png)
+![plot of chunk unnamed-chunk-25](./image1/unnamed-chunk-25-1.png)
 
 ### The Layered Grammar of Graphics
 Now we learned much more than how to make scatterplots, bar charts, and boxplots. We learned a foundation that we can use to make any type of plot with ggplot2. To see this, let's add position adjustments, stats, coordinate systems, and faceting to our code template:
